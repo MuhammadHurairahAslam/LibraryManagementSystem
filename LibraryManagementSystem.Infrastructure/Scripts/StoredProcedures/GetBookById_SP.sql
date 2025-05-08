@@ -1,0 +1,11 @@
+IF OBJECT_ID('dbo.GetBookById_SP', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.GetBookById_SP;
+
+GO
+CREATE PROCEDURE GetBookById_SP
+    @Id INT
+AS
+BEGIN
+    SELECT * FROM Books WHERE Id = @Id;
+END;
+GO

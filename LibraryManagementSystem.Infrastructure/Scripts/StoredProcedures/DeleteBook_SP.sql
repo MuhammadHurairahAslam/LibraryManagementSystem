@@ -1,0 +1,10 @@
+IF OBJECT_ID('dbo.DeleteBook_SP', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.DeleteBook_SP;
+GO
+CREATE PROCEDURE DeleteBook_SP
+    @Id INT
+AS
+BEGIN
+    DELETE FROM Books WHERE Id = @Id;
+END;
+GO
